@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Pokemones</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body class="container">
+  <h4 class="center-align">Pokemones Registrados</h4>
+
+  <table class="highlight responsive-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Nivel</th>
+        <th>Habilidad</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% pokemones.forEach(p => { %>
+        <tr>
+          <td><%= p.nombre %></td>
+          <td><%= p.tipo %></td>
+          <td><%= p.nivel %></td>
+          <td><%= p.habilidad %></td>
+          <td>
+            <% if (p.imagen) { %>
+              <img src="<%= p.imagen %>" alt="Imagen de <%= p.nombre %>" width="80">
+            <% } else { %>
+              Sin imagen
+            <% } %>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <a href="/nuevo-pokemon" class="btn">Agregar otro</a>
+  <a href="/" class="btn grey">Inicio</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

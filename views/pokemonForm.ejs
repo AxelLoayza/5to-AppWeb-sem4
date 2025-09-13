@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Pokémon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body class="container">
+  <h4 class="center-align">Registrar Pokémon</h4>
+
+  <form action="/nuevo-pokemon" method="POST">
+    <div class="input-field"><input type="text" name="nombre" required><label>Nombre</label></div>
+    <div class="input-field"><input type="text" name="tipo" required><label>Tipo</label></div>
+    <div class="input-field"><input type="number" name="nivel" required><label>Nivel</label></div>
+    <div class="input-field"><input type="text" name="habilidad" required><label>Habilidad</label></div>
+    <div class="input-field"><input type="url" name="imagen"><label>URL de Imagen</label></div>
+
+    <button class="btn waves-effect waves-light" type="submit">Guardar</button>
+    <a href="/pokemones" class="btn grey">Ver Pokemones</a>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
